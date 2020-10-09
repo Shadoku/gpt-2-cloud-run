@@ -55,9 +55,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary Meta Tags -->
   <title>AI-Generated Lyrics based on keywords and phrases</title>
-  <meta name="title" content="AI-Generated Lyrics based on keywords and phrases" />
-  <meta name="description" content="Generate custom songs from an AI!" />
+  <meta name="title" content="AI-Generated Lyrics based on keywords and phrases">
+  <meta name="description" content="This website will help you in the songwriting process. You feed it with a phrase or a few words and it writes a song inspired on these.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lyrics.mathigatti.com/">
+  <meta property="og:title" content="AI-Generated Lyrics based on keywords and phrases">
+  <meta property="og:description" content="This website will help you in the songwriting process. You feed it with a phrase or a few words and it writes a song inspired on these.">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://lyrics.mathigatti.com/">
+  <meta property="twitter:title" content="AI-Generated Lyrics based on keywords and phrases">
+  <meta property="twitter:description" content="This website will help you in the songwriting process. You feed it with a phrase or a few words and it writes a song inspired on these.">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -101,7 +115,7 @@
             <div class="field">
               <label class="label">Creativity</label>
               <div class="control">
-                <input id="temperature" class="input" type="text" placeholder="0.7" value="0.7">
+                <input id="temperature" type="number" class="input" type="text" placeholder="0.7"  min="0" max="1" step = "0.1" value="0.7">
               </div>
               <p class="help">Should be between 0.0 and 1.0, the higher the value, the more
                   creative/crazy the text.</em></p>
@@ -110,7 +124,7 @@
               <label class="label">Repetition penalty
                 <input id="repetition" type="checkbox" checked="checked" value="1.1"/>
               </label>
-              <p class="help">Activate it to reduce repetiveness on the results.</p>
+              <p class="help">Activate it to reduce repetitiveness in the results.</p>
             </div>
             <div class="buttons">
               <span class="control">
