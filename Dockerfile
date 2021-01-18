@@ -9,7 +9,7 @@ COPY trained_model /trained_model
 # This Dockerfile order allows Docker to cache the checkpoint layer
 # and improve build times if making changes.
 RUN pip3 --no-cache-dir install --upgrade pip
-RUN pip3 --no-cache-dir install transformers==2.9.1 aitextgen starlette uvicorn ujson
+RUN pip3 --no-cache-dir install transformers==2.9.1 aitextgen starlette==0.13.8 uvicorn ujson
 COPY app.py /
 
 # Clean up APT when done.
