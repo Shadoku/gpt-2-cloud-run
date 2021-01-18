@@ -1,14 +1,14 @@
-# gpt-2-cloud-run
+# aitextgen-cloud-run
 
-App for building a text-generation API for generating text from [OpenAI](https://openai.com)'s [GPT-2](https://openai.com/blog/better-language-models/) via [gpt-2-simple](https://github.com/minimaxir/gpt-2-simple), and running it in a scalable manner *and effectively free* via Google's [Cloud Run](https://cloud.google.com/run/). This app is intended to be used to easily and cost-effectively allow others to play with a finetuned GPT-2 model on another dataset, and allow programmatic access to the generated text.
+App for building a text-generation API for generating text from [OpenAI](https://openai.com)'s [GPT-2](https://openai.com/blog/better-language-models/) via [aitextgen](https://github.com/minimaxir/aitextgen), and running it in a scalable manner *and effectively free* via Google's [Cloud Run](https://cloud.google.com/run/). This app is intended to be used to easily and cost-effectively allow others to play with a finetuned GPT-2 model on another dataset, and allow programmatic access to the generated text.
 
 The base `app.py` runs [starlette](https://www.starlette.io) for async/futureproofness, and is easily hackable if you want to modify GPT-2's input/output, force certain generation parameters, or want to add additional features/endpoints such as tweeting the generated result.
 
 ## Demo
 
-You can play with a web-based demo of a Cloud Run API pointing at the default 117M "small" GPT-2 model here: https://minimaxir.com/apps/gpt2-small/
+You can play with a web-based demo of a Cloud Run API pointing at the default 117M "small" GPT-2 model here: https://lyrics.mathigatti.com/
 
-The demo web UI is based off of the `app_ui.html` file in this repo (built on [Bulma](https://bulma.io) and [jQuery](https://jquery.com)) and is designed to be easily hackable to add new features and/or adjust the design (e.g. you can change the URL in the JavaScript function to point to your own Cloud Run API).
+The demo web UI is based off of the `frontend/index.html` file in this repo (built on [Bulma](https://bulma.io) and [jQuery](https://jquery.com)) and is designed to be easily hackable to add new features and/or adjust the design (e.g. you can change the URL in the JavaScript function to point to your own Cloud Run API).
 
 ## How to Build the Container And Start Cloud Run
 
@@ -84,7 +84,9 @@ The UI from `app_ui.html` utilizes AJAX `POST` requests via jQuery to retrieve t
 
 ## Maintainer/Creator
 
-Max Woolf ([@minimaxir](https://minimaxir.com))
+Mathias Gatti ([@mathigatti](https://mathigatti.com))
+
+The original code was forked from Max Woolf ([@minimaxir](https://minimaxir.com))
 
 *Max's open-source projects are supported by his [Patreon](https://www.patreon.com/minimaxir). If you found this project helpful, any monetary contributions to the Patreon are appreciated and will be put to good creative use.*
 
